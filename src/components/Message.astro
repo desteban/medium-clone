@@ -1,0 +1,29 @@
+---
+
+---
+
+<div
+  id="message"
+  class="px-6 py-4 bg-white flex space-x-3 justify-between items-center relative"
+>
+  <p>
+    <span>Este sitio web es un <b>clon de la web real</b>.</span>
+    <br />
+    <span> This website is a <b>clone of the real website</b>.</span>
+  </p>
+  <a
+    class="underline px-4 py-1.5 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition duration-300 ease-in-out"
+    href="https://medium.com"
+    title="medium.com">medium.com</a
+  >
+
+  <div class="absolute right-2 top-1 md:right-1">
+    <button id="close-message" class="appearance-none">X</button>
+  </div>
+</div>
+
+<script>
+  document.getElementById("close-message")?.addEventListener("click", () => {
+    document.getElementById("message")?.classList.add("hidden");
+  });
+</script>
