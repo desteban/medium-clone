@@ -4,56 +4,67 @@ import Logo from "@public/Logo.astro";
 import Boton from "@components/Button.astro";
 import Message from "@components/Message.astro";
 import M from "@public/Ms.astro";
+import BasicContainer from "@components/Containers/BasicContainer.astro";
 ---
 
-<Layout title="Inicio">
-  <header
-    class="p-2 flex space-x-3 justify-between px-6 items-center h-[10svh] border-b-[1px] border-black md:h-[75px]"
-  >
-    <div class="w-44">
-      <Logo />
-    </div>
+<Layout title="Inicio" clasName="bg-[#FFC017]">
+  <header class="h-[76px] border-b-[1px] border-black">
+    <BasicContainer className="h-full">
+      <div class="h-full flex space-x-3 justify-between items-center">
+        <div class="w-40 max-w-40">
+          <Logo />
+        </div>
 
-    <div class="flex gap-1 items-center">
-      <div class="mr-0 hidden md:block md:mr-5 flex space-x-4">
-        <a href="">Our sstory</a><a href="">Membership</a><a href="">writers</a
-        ><a href="">Sign in</a>
+        <div class="flex gap-1 items-center">
+          <div class="mr-0 hidden md:block md:mr-5 flex space-x-4">
+            <a href="">Our sstory</a><a href="">Membership</a><a href=""
+              >writers</a
+            ><a href="">Sign in</a>
+          </div>
+          <Boton className="font-light"> Get started </Boton>
+        </div>
       </div>
-      <Boton> Get started </Boton>
-    </div>
+    </BasicContainer>
   </header>
 
   <main class="h-full">
     <div
-      class="h-[76svh] flex items-center justify-center px-6 relative md:justify-start md:h-[calc(100svh-150px)]"
+      class="h-[calc(100svh-14svh-76px)] flex items-center justify-center relative md:justify-start lg:h-[calc(100svh-151px)] overflow-hidden"
     >
-      <div class="md:px-14">
-        <h2 class="text-7xl mb-10 text-pretty md:text-8xl">Stay curious.</h2>
+      <!-- Texto -->
+      <BasicContainer>
+        <div class="">
+          <h2 class="text-7xl mb-10 text-pretty md:text-8xl">Stay curious.</h2>
 
-        <h3 class="mb-10 text-2xl text-balance max-w-lg">
-          Discover stories, thinking, and expertise from writers on any topic.
-        </h3>
+          <h3 class="mb-12 text-2xl text-balance max-w-lg">
+            Discover stories, thinking, and expertise from writers on any topic.
+          </h3>
 
-        <Boton className="px-6 font-semibold text-xl w-56">Start reading</Boton>
-      </div>
+          <Boton className="px-6 font-semibold text-xl w-56"
+            >Start reading</Boton
+          >
+        </div>
+      </BasicContainer>
 
-      <div class="hidden md:block absolute top-0 right-0 h-full">
+      <!-- Ms -->
+      <div class="hidden lg:block absolute top-7 right-0 h-full">
         <div class="h-full flex items-center -z-10">
           <M />
         </div>
       </div>
 
+      <!-- Mensaje -->
       <div class="absolute left-0 top-0 z-10 w-full">
         <Message />
       </div>
     </div>
 
-    <div class="min-h-[14svh] bg-black text-white px-6 py-6 md:hidden">
+    <div class="min-h-[14svh] bg-black text-white px-6 py-6 lg:hidden">
       <div class="w-36">
         <Logo />
       </div>
 
-      <div class="flex space-x-2 mt-4">
+      <div class="flex space-x-2 mt-6">
         <a href="">About</a>
         <a href="">Help</a>
         <a href="">Terms</a>
@@ -62,7 +73,7 @@ import M from "@public/Ms.astro";
     </div>
 
     <div
-      class="hidden bg-[#f7f4ed] md:border-t border-black h-[75px] md:flex items-center justify-center"
+      class="hidden bg-[#f7f4ed] lg:border-t border-black h-[75px] lg:flex items-center justify-center"
     >
       <div
         class="h-full min-w-max flex space-x-4 items-center text-sm text-gray-500 px-2 py-1"

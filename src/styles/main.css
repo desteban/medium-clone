@@ -4,6 +4,10 @@
 
 @layer base {
   :root {
+    --page-container-padding-x: 1rem;
+    --tamanio-pantalla: 100%;
+    --padding-top-main: 1.55rem;
+    --padding-bottom-main: 1.55rem;
   }
 }
 
@@ -13,4 +17,41 @@ html {
 
 h2 {
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+@media screen and (min-width: 650px) {
+  :root {
+    --page-container-padding-x: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  * {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  :root {
+    --page-container-padding-x: 2rem;
+    --tamanio-pantalla: 50.6818rem;
+    --padding-top-main: 2rem;
+    --padding-bottom-main: 3rem;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1125px) {
+  :root {
+    --page-container-padding-x: 2.5rem;
+    /* --tamanio-pantalla: 50.6818rem; */
+    --tamanio-pantalla: 60rem;
+    --padding-top-main: 3rem;
+    /* --padding-bottom-main: 5rem; */
+  }
 }

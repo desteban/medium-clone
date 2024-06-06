@@ -4,9 +4,10 @@ import "@styles/main.css";
 interface Props {
   title: string;
   description?: string;
+  clasName?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, clasName = "" } = Astro.props;
 ---
 
 <html lang="es-CO">
@@ -16,7 +17,7 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
-  <body class="bg-[#FFC017]">
+  <body class={clasName}>
     <slot />
   </body>
 </html>
