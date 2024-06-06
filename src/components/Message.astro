@@ -1,10 +1,14 @@
 ---
+interface Props {
+  className?: string;
+}
 
+const { className } = Astro.props;
 ---
 
 <div
   id="message"
-  class="px-6 py-4 bg-white flex space-x-3 justify-between items-center relative"
+  class={`px-6 py-4 bg-white flex space-x-3 justify-between items-center relative ${className}`}
 >
   <p>
     <span>Este sitio web es un <b>clon de la web real</b>.</span>
@@ -17,7 +21,7 @@
     title="medium.com">medium.com</a
   >
 
-  <div class="absolute right-2 top-1 md:right-1">
+  <div class="absolute right-4 top-1 md:right-1">
     <button id="close-message" class="appearance-none">X</button>
   </div>
 </div>

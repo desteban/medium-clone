@@ -1,0 +1,227 @@
+---
+import Logo from "@public/Logo.astro";
+import Layout from "@layout/main.astro";
+import BasicContainer from "@components/Containers/BasicContainer.astro";
+import Search from "@public/Search.astro";
+import Message from "@components/Message.astro";
+---
+
+<Layout title="Help Center">
+  <header class="h-[87px] bg-black">
+    <BasicContainer
+      className="h-full text-white flex items-center justify-between"
+    >
+      <div class="h-full flex items-center space-x-4">
+        <a class="w-[161px] h-[25px] flex items-center" href="/">
+          <Logo />
+        </a>
+        <div class="text-xs font-light hidden md:block">Help Center</div>
+      </div>
+
+      <div>other</div>
+    </BasicContainer>
+  </header>
+
+  <main>
+    <div class="h-[50svh] bg-blue-200 px-4 py-8">
+      <div class="w-full">
+        <h1 class="text-5xl font-medium mb-8 text-center">How can we help?</h1>
+        <div
+          class="w-full h-12 rounded-full bg-[#f9fcff] px-14 flex items-center relative"
+        >
+          <div class="absolute h-full flex items-center top-0 left-4">
+            <Search size={32} />
+          </div>
+
+          <input
+            class="w-full h-full text-lg"
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search..."
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="mt-8 flex flex-col items-center">
+          <span class="">Popular:</span>
+          <div class="mt-1 flex flex-col items-center space-y-1">
+            <a class="pb-[1px] border-b border-black" href="">Gifting</a>
+            <a class="pb-[1px] border-b border-black" href="">Membership</a>
+            <a class="pb-[1px] border-b border-black" href="">Partner Program</a
+            >
+            <a class="pb-[1px] border-b border-black" href="">Sing In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6">
+      <Message className="bg-gray-100" />
+    </div>
+
+    <div class="container mx-auto h-20"></div>
+
+    <BasicContainer className="md:grid md:grid-cols-3 md:gap-9 lg:px-5 xl:p-0">
+      <div class="mt-8 border px-8 py-10 flex flex-col gap-8 shadow-md md:mt-0">
+        <div class="relative">
+          <div class="pl-16">
+            <h3 class="font-bold normal-text mb-2">Getting started</h3>
+            <span class="text-gray-500"
+              >Learn more about Medium and set up your account</span
+            >
+          </div>
+        </div>
+
+        <div class="">
+          <ul class="">
+            <li class="">Sign in or sign up to Medium</li>
+            <li class="">Using Medium</li>
+            <li class="">Medium membership</li>
+            <li class="">Medium glossary</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 border px-8 py-10 flex flex-col gap-8 shadow-md md:mt-0">
+        <div class="relative">
+          <div class="pl-16">
+            <h3 class="font-bold normal-text mb-2">Getting started</h3>
+            <span class="text-gray-500"
+              >Learn more about Medium and set up your account</span
+            >
+          </div>
+        </div>
+
+        <div class="">
+          <ul class="">
+            <li class="">Sign in or sign up to Medium</li>
+            <li class="">Using Medium</li>
+            <li class="">Medium membership</li>
+            <li class="">Medium glossary</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 border px-8 py-10 flex flex-col gap-8 shadow-md md:mt-0">
+        <div class="relative">
+          <div class="pl-16">
+            <h3 class="font-bold normal-text mb-2">Getting started</h3>
+            <span class="text-gray-500"
+              >Learn more about Medium and set up your account</span
+            >
+          </div>
+        </div>
+
+        <div class="">
+          <ul class="">
+            <li class="">Sign in or sign up to Medium</li>
+            <li class="">Using Medium</li>
+            <li class="">Medium membership</li>
+            <li class="">Medium glossary</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 border px-8 py-10 flex flex-col gap-8 shadow-md md:mt-0">
+        <div class="relative">
+          <div class="pl-16">
+            <h3 class="font-bold normal-text mb-2">Getting started</h3>
+            <span class="text-gray-500"
+              >Learn more about Medium and set up your account</span
+            >
+          </div>
+        </div>
+
+        <div class="">
+          <ul class="">
+            <li class="">Sign in or sign up to Medium</li>
+            <li class="">Using Medium</li>
+            <li class="">Medium membership</li>
+            <li class="">Medium glossary</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 border px-8 py-10 flex flex-col gap-8 shadow-md md:mt-0">
+        <div class="relative">
+          <div class="pl-16">
+            <h3 class="font-bold normal-text mb-2">Getting started</h3>
+            <span class="text-gray-500"
+              >Learn more about Medium and set up your account</span
+            >
+          </div>
+        </div>
+
+        <div class="">
+          <ul class="">
+            <li class="">Sign in or sign up to Medium</li>
+            <li class="">Using Medium</li>
+            <li class="">Medium membership</li>
+            <li class="">Medium glossary</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 border px-8 py-10 flex flex-col gap-8 shadow-md md:mt-0">
+        <div class="relative">
+          <div class="pl-16">
+            <h3 class="font-bold normal-text mb-2">Getting started</h3>
+            <span class="text-gray-500"
+              >Learn more about Medium and set up your account</span
+            >
+          </div>
+        </div>
+
+        <div class="">
+          <ul class="">
+            <li class="">Sign in or sign up to Medium</li>
+            <li class="">Using Medium</li>
+            <li class="">Medium membership</li>
+            <li class="">Medium glossary</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 border px-8 py-10 flex flex-col gap-8 shadow-md md:mt-0">
+        <div class="relative">
+          <div class="pl-16">
+            <h3 class="font-bold normal-text mb-2">Getting started</h3>
+            <span class="text-gray-500"
+              >Learn more about Medium and set up your account</span
+            >
+          </div>
+        </div>
+
+        <div class="">
+          <ul class="">
+            <li class="">Sign in or sign up to Medium</li>
+            <li class="">Using Medium</li>
+            <li class="">Medium membership</li>
+            <li class="">Medium glossary</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 border px-8 py-10 flex flex-col gap-8 shadow-md md:mt-0">
+        <div class="relative">
+          <div class="pl-16">
+            <h3 class="font-bold normal-text mb-2">Getting started</h3>
+            <span class="text-gray-500"
+              >Learn more about Medium and set up your account</span
+            >
+          </div>
+        </div>
+
+        <div class="">
+          <ul class="">
+            <li class="">Sign in or sign up to Medium</li>
+            <li class="">Using Medium</li>
+            <li class="">Medium membership</li>
+            <li class="">Medium glossary</li>
+          </ul>
+        </div>
+      </div>
+    </BasicContainer>
+  </main>
+</Layout>
