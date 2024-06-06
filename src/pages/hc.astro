@@ -14,7 +14,13 @@ import Check from "@public/icons/check.astro";
 import Tool from "@public/icons/Tool.astro";
 import BookOpen from "@public/icons/BookOpen.astro";
 import HCFooter from "@components/footers/HCFooter.astro";
+import Button from "@components/Button.astro";
 ---
+
+<style>
+  nav {
+  }
+</style>
 
 <Layout title="Help Center">
   <header class="h-[87px] bg-black">
@@ -28,9 +34,41 @@ import HCFooter from "@components/footers/HCFooter.astro";
         <div class="text-xs font-light hidden md:block">Help Center</div>
       </div>
 
-      <div>other</div>
+      <nav
+        id="nav"
+        class="absolute z-20 h-full w-2/3 md:w-2/5 bg-white p-8 top-0 -left-full transition-all duration-300 flex flex-col gap-3 lg:static lg:flex-row lg:items-center lg:p-0 lg:w-auto lg:bg-black"
+      >
+        <a
+          class="text-sm font-normal text-gray-700 tracking-wider lg:text-white lg:text-[14px] lg:font-light"
+          href="/">Back to medium-clone</a
+        >
+        <!-- bg-black border text-black lg:border-gray-200 lg:text-gray-200 -->
+        <div
+          class="text-black bg-transparent mt-4 lg:mt-0 lg:px-4 lg:py-2 lg:border lg:border-white flex items-center lg:rounded-full"
+        >
+          <a
+            class="text-sm font-normal tracking-wide text-gray-700 lg:text-white lg:text-[14px] lg:font-light"
+            target="_blank"
+            href="https://help.medium.com/hc/en-us/requests/new"
+          >
+            Submit a request
+          </a>
+        </div>
+      </nav>
+
+      <button id="trigger-nav" class="appearance-none lg:hidden">
+        <div class="mb-[6px] w-7 h-[2px] bg-white"></div>
+        <div class="mb-[6px] w-7 h-[2px] bg-white"></div>
+        <div class="mb-[6px] w-7 h-[2px] bg-white"></div>
+      </button>
     </BasicContainer>
   </header>
+
+  <div
+    id="fondo"
+    class="-z-10 absolute top-0 left-0 w-full h-full bg-none opacity-40 transition-all duration-200"
+  >
+  </div>
 
   <main>
     <div class="h-[50svh] bg-blue-200 px-4 py-8 md:h-80">
@@ -353,3 +391,18 @@ import HCFooter from "@components/footers/HCFooter.astro";
 
   <HCFooter />
 </Layout>
+
+<script>
+  let nav = document.getElementById("nav");
+  let fondo = document.getElementById("fondo");
+
+  function ToggleMenu() {
+    fondo?.classList.toggle("z-10");
+    fondo?.classList.toggle("bg-black");
+    nav?.classList.toggle("left-[0px]");
+    document.querySelector("body")?.classList.toggle("overflow-y-hidden");
+  }
+
+  document.getElementById("trigger-nav")?.addEventListener("click", ToggleMenu);
+  fondo?.addEventListener("click", ToggleMenu);
+</script>

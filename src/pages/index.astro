@@ -5,6 +5,9 @@ import Boton from "@components/Button.astro";
 import Message from "@components/Message.astro";
 import M from "@public/Ms.astro";
 import BasicContainer from "@components/Containers/BasicContainer.astro";
+import About from "@components/Enlaces/About.astro";
+import HelpCenter from "@components/Enlaces/HelpCenter.astro";
+import StatusM from "@components/Enlaces/Status.astro";
 ---
 
 <Layout title="Inicio" clasName="bg-[#FFC017]">
@@ -65,8 +68,8 @@ import BasicContainer from "@components/Containers/BasicContainer.astro";
       </div>
 
       <div class="flex space-x-2 mt-6">
-        <a href="">About</a>
-        <a href="">Help</a>
+        <About />
+        <HelpCenter />
         <a href="">Terms</a>
         <a href="">Privacy</a>
       </div>
@@ -78,9 +81,9 @@ import BasicContainer from "@components/Containers/BasicContainer.astro";
       <div
         class="h-full min-w-max flex space-x-4 items-center text-sm text-gray-500 px-2 py-1"
       >
-        <a href="/hc">Help</a>
-        <a href="https://medium.statuspage.io" target="_blank">Status</a>
-        <a href="">About</a>
+        <HelpCenter />
+        <StatusM />
+        <About />
         <a href="">Carees</a>
         <a href="">Press</a>
         <a href="">Blog</a>
