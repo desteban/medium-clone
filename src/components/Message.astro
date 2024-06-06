@@ -8,7 +8,7 @@ const { className } = Astro.props;
 
 <div
   id="message"
-  class={`px-6 py-4 bg-white flex space-x-3 justify-between items-center relative ${className}`}
+  class={`px-6 py-4 bg-white flex space-x-3 justify-between items-center relative md:px-11 ${className}`}
 >
   <p>
     <span>Este sitio web es un <b>clon de la web real</b>.</span>
@@ -17,11 +17,12 @@ const { className } = Astro.props;
   </p>
   <a
     class="underline px-4 py-1.5 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition duration-300 ease-in-out"
+    target="_blank"
     href="https://medium.com"
     title="medium.com">medium.com</a
   >
 
-  <div class="absolute right-4 top-1 md:right-1">
+  <div class="absolute right-4 top-1 md:right-3">
     <button id="close-message" class="appearance-none">X</button>
   </div>
 </div>
