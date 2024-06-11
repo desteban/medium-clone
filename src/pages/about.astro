@@ -1,0 +1,143 @@
+---
+import Layout from "@layout/main.astro";
+import Logo from "@public/Logo.astro";
+import Button from "@components/Button.astro";
+import ArrowRight from "@public/icons/ArrowRight.astro";
+import TextContainer from "@components/Containers/TextContainer.astro";
+
+import AboutLink from "@components/Enlaces/About.astro";
+---
+
+<Layout
+  title="About"
+  clasName="bg-[rgb(36,36,36)] text-white text-xl leading-8"
+>
+  <header
+    class="h-[81pz] p-6 pl-8 flex items-center justify-between border-b border-white"
+  >
+    <div class="h-full w-36 text-white">
+      <Logo />
+    </div>
+
+    <div class="flex space-x-2">
+      <Button
+        className="bg-[rgb(36,36,36)] border border-white !font-light text-[12px] px-3 py-[4px]"
+        >Sign in</Button
+      >
+
+      <Button
+        className="bg-white !text-black !font-light text-[12px] px-3 !py-1"
+        >Sign up</Button
+      >
+    </div>
+  </header>
+
+  <main>
+    <section class="px-5 py-20 md:px-8">
+      <TextContainer>
+        <h2 class="text-5xl mb-10 md:text-7xl">
+          Everyone has a story to tell.
+        </h2>
+
+        <div class="font-light text-2xl">
+          <p class="text-xl">
+            Medium is a home for human stories and ideas. Here, anyone can share
+            insightful perspectives, useful knowledge, and life wisdom with the
+            world—without building a mailing list or a following first. The
+            internet is noisy and chaotic; Medium is quiet yet full of insight.
+            It’s simple, beautiful, collaborative, and helps you find the right
+            audience for whatever you have to say.
+          </p>
+
+          <p class="text-xl">
+            We believe that what you read and write matters. Words can divide or
+            empower us, inspire or discourage us. In a world where the most
+            sensational and surface-level stories often win, we’re building a
+            system that rewards depth, nuance, and time well spent. A space for
+            thoughtful conversation more than drive-by takes, and substance over
+            packaging.
+          </p>
+
+          <span
+            class="bg-[rgba(255,255,255,0.2)] text-[28px] !font-extralight text-pretty"
+            >Ultimately, our goal is to deepen our collective understanding of
+            the world through the power of writing.</span
+          >
+
+          <p class="mt-8 text-xl">
+            Over 100 million people connect and share their wisdom on Medium
+            every month. Many are professional writers, but just as many
+            aren’t — they’re CEOs, computer scientists, U.S. presidents, amateur
+            novelists, and anyone burning with a story they need to get out into
+            the world. They write about what they’re working on, what’s keeping
+            them up at night, what they’ve lived through, and what they’ve
+            learned that the rest of us might want to know too.
+          </p>
+
+          <p class="text-xl">
+            Instead of selling ads or selling your data, we’re supported by a
+            growing community of <a
+              class="underline"
+              href="https://medium.com/membership"
+              title="members">Medium members</a
+            > who align with our mission. If you’re new here, <a
+              class="underline"
+              href="/">start exploring</a
+            >. Dive deeper into whatever matters to you. Find a post that helps
+            you learn something new, or reconsider something familiar—and then <a
+              class="underline"
+              href="https://medium.com/m/signin"
+              title="Sign in">share your own story</a
+            >.
+          </p>
+        </div>
+      </TextContainer>
+    </section>
+
+    <div class="">
+      <a
+        class="border-t border-white flex justify-between px-5 pt-8 pb-10 md:px-8 md:pt-14 md:pb-16 hover:bg-white hover:text-black transition-all duration-300"
+        href="/"
+      >
+        <span class="text-3xl md:text-7xl">Start reading</span>
+
+        <ArrowRight />
+      </a>
+
+      <a
+        class="border-t border-white flex justify-between px-5 pt-8 pb-10 md:px-8 md:pt-14 md:pb-16 hover:bg-white hover:text-black transition-all duration-300"
+        href="https://medium.com/new"
+      >
+        <span class="text-3xl md:text-7xl">Start writing</span>
+
+        <ArrowRight />
+      </a>
+
+      <a
+        class="border-t border-white flex justify-between px-5 pt-8 pb-10 md:px-8 md:pt-14 md:pb-16 hover:bg-white hover:text-black transition-all duration-300"
+        href="https://medium.com/membership"
+      >
+        <span class="text-3xl md:text-7xl">Become a member</span>
+
+        <ArrowRight />
+      </a>
+    </div>
+
+    <div
+      class="p-6 bg-white flex flex-col items-center md:flex-row md:justify-between !font-light"
+    >
+      <div class="w-36 text-black">
+        <Logo />
+      </div>
+
+      <div class="flex gap-3 p-2 !text-xs underline text-gray-600">
+        <AboutLink />
+        <a href="">Terms</a>
+        <a href="">Privacy</a>
+        <a href="">Help</a>
+        <a href="">Teams</a>
+        <a href="">Press</a>
+      </div>
+    </div>
+  </main>
+</Layout>
